@@ -1,12 +1,12 @@
-package services;
+package com.example.evenmentsgcrm.services;
 
-import dto.EventDTO;
+import com.example.evenmentsgcrm.dto.EventDTO;
 import jakarta.persistence.EntityNotFoundException;
-import entity.Event;
-import mapper.EventMapper;
+import com.example.evenmentsgcrm.entity.Event;
+import com.example.evenmentsgcrm.mapper.EventMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.EventRepository;
+import com.example.evenmentsgcrm.repository.EventRepository;
 
 import java.util.List;
 import java.util.stream.Collectors;

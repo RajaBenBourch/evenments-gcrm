@@ -1,27 +1,28 @@
-package controllers;
+package com.example.evenmentsgcrm.controllers;
 
-import dto.EventDTO;
+import com.example.evenmentsgcrm.dto.EventDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import services.EventService;
+import com.example.evenmentsgcrm.services.EventService;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/events")
+@CrossOrigin("*")
+@RequestMapping("/api/events")
 public class EventController {
     @Autowired
     private EventService eventService;
 
-    @PostMapping
+    @PostMapping("/createEvent")
     public ResponseEntity<EventDTO> createEvent(@RequestBody EventDTO eventDTO) {
         EventDTO createdEvent = eventService.createEvent(eventDTO);
         return new ResponseEntity<>(createdEvent, HttpStatus.CREATED);
     }
 
-    @GetMapping
+    @GetMapping("/getAllEvents")
     public ResponseEntity<List<EventDTO>> getAllEvents() {
         List<EventDTO> events = eventService.getAllEvents();
         return new ResponseEntity<>(events, HttpStatus.OK);

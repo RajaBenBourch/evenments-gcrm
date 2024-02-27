@@ -1,7 +1,7 @@
-package mapper;
-import dto.EventDTO;
+package com.example.evenmentsgcrm.mapper;
+import com.example.evenmentsgcrm.dto.EventDTO;
 import org.springframework.stereotype.Component;
-import entity.Event;
+import com.example.evenmentsgcrm.entity.Event;
 
 @Component
 public class EventMapper {

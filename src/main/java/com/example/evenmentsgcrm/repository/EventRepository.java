@@ -1,6 +1,6 @@
-package repository;
+package com.example.evenmentsgcrm.repository;
 
-import entity.Event;
+import com.example.evenmentsgcrm.entity.Event;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

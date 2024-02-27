@@ -1,4 +1,4 @@
-package entity;
+package com.example.evenmentsgcrm.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
